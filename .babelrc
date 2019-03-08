@@ -1,7 +1,17 @@
 {
     "presets": [
-        "env",
-        "react",
-        "stage-2"
-    ]
+        "@babel/preset-react"
+    ],
+    "env": {
+        "development": {
+            "presets": [
+                [
+                    "@babel/preset-react",
+                    {
+                        "development": true
+                    }
+                ]
+            ]
+        }
+    }
 }

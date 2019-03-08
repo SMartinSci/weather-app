@@ -1,6 +1,3 @@
-import React, { Component } from 'react';
-import './UnitComponent.css'
-
 class UnitComponent extends Component {
 
     changeUnit = (e) => {
@@ -17,5 +14,3 @@ class UnitComponent extends Component {
         );
     }
 }
-
-export default UnitComponent;

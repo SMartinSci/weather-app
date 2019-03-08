@@ -1,38 +1,22 @@
-import React, { Component } from 'react';
-import './SearchBox.css';
+
 class SearchBox extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            queryString: ''
+            query: ''
         };
-    }
-
-    render() {
-        return (
-            <div className="form-container">
-                <form>
-                    <input
-                        type="search"
-                        value={this.state.queryString}
-                        name="searchBox"
-                        id="searchBox"
-                        placeholder="Enter City or Zipcode" />
-                    <span className="search-button fa fa-search"></span>
-                </form>
-            </div>
-        );
     }
 
     handleQueryStringChange = (e) => {
         this.setState({
-            queryString: e.target.value
+            query: e.target.value
         })
     }
 
     handleSearch = (e) => {
         e.preventDefault();
-        console.log('Fetch weather data for:', this.state.queryString);
+        console.log('Fetch weather data for:', this.state.query);
+        this.props.searchSubmit(this.state.query);
     }
 
     render() {
@@ -40,8 +24,8 @@ class SearchBox extends Component {
             <div className="form-container">
                 <form onSubmit={this.handleSearch}>
                     <input
-                        type="text"
-                        value={this.state.queryString}
+                        type="search"
+                        value={this.state.query}
                         name="searchBox"
                         id="searchBox"
                         placeholder="Enter City or Zipcode"
@@ -54,5 +38,3 @@ class SearchBox extends Component {
         );
     }
 }
-
-export default SearchBox;

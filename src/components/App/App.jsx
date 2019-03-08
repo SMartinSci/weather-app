@@ -3,7 +3,7 @@ import Navbar from '../Navbar';
 import TodayComponent from '../TodayComponent';
 import ListComponent from '../ListComponent';
 import GraphComponent from '../GraphComponent';
-//import axios from 'axios';
+import axios from 'axios';
 
 import './App.css';
 

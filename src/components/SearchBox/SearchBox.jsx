@@ -1,3 +1,5 @@
+import React, { Component } from 'react';
+import './SearchBox.css';
 
 class SearchBox extends Component {
     constructor(props) {
@@ -39,4 +41,4 @@ class SearchBox extends Component {
     }
 }
 
-export default SearchBoxComponent;
+export default SearchBox;

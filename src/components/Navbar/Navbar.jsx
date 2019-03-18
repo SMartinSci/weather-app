@@ -1,3 +1,7 @@
+import React, { Component } from 'react';
+import './Navbar.css';
+import SearchBox from '../SearchBox';
+import UnitComponent from '../UnitComponent';
 
 class Navbar extends Component {
 
@@ -23,4 +27,4 @@ class Navbar extends Component {
     }
 }
 
-export default NavbarComponent;
+export default Navbar;

@@ -5,6 +5,10 @@
     height: 100vh;
 }
 
+.app-today{
+    margin: 15px 0px;
+}
+
 .app-list-graph{
     display: flex;
     flex-direction: row;

@@ -55,6 +55,14 @@ class App extends Component {
 
         if (hasLatLng || hasCityOrZipcode) {
             this.fetchWeatherForecast(hasLatLng).then(forecastData => {
+                fetchWeatherForecast = (hasLatLng) => {
+                    const API_KEY = '017f979fc22e8f26627a36910e593c38';
+                    const BASE_URL = 'https://api.openweathermap.org/data/2.5/forecast/daily';
+                    const queryParams = (hasLatLng) ? `lat=${this.state.latLng[0]}&lon=${this.state.latLng[1]}` : `q=${this.state.queryString}`;
+                    const unitType = (this.state.unit === 'C') ? 'metric' : 'imperial';
+
+
+
                 // console.log('Forecast Data:', forecastData);
                 // Extract component specific data...
                 const navbarData = this.extractDataForNavbar(forecastData);

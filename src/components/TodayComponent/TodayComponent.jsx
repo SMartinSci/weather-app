@@ -78,3 +78,5 @@ class TodayComponent extends Component {
         );
     }
 }
+
+export default TodayComponent;

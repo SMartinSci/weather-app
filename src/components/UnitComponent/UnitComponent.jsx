@@ -14,3 +14,5 @@ class UnitComponent extends Component {
         );
     }
 }
+
+export default UnitComponent;
